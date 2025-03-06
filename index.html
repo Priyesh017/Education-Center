@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Your Perfect Teacher</title>
+
+    <!-- Spectre CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+    />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Normal CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">eduCenter</div>
+      <nav>
+        <a href="#" class="bounce-to-right">Become a Teacher</a>
+        <a href="#" class="bounce-to-right">Quick Login</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="animate__animated animate__bounceInDown">
+        Find your <br />
+        <span class="highlight">perfect teacher</span>
+      </h1>
+
+      <div class="search-item">
+        <div class="search-bar">
+          <div class="input-box">
+            <i class="fas fa-book"></i>
+            <input
+              type="text"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+              placeholder='Try "Maths"'
+              id="searchInput"
+            />
+          </div>
+          <div class="input-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <input
+              type="text"
+              placeholder="Course Location"
+              id="locationInput"
+            />
+          </div>
+          <button class="bounce-in" id="searchButton">Search</button>
+        </div>
+      </div>
+
+      <div class="auto">
+        <div class="categories">
+          <div class="category"><!-- Buttons will be added dynamically --></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="logo">eduCenter</div>
+
+      <!-- Search Bar -->
+      <div class="search">
+        <input type="text" placeholder="Course Location" id="locationInput" />
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links">
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#tutors-section" class="nav-link">Find Tutors</a>
+        <a href="#">Become a Teacher</a>
+        <a href="#">Quick Login</a>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <!-- Close Button -->
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#tutors-section" class="nav-link">Find Tutors</a>
+        <a href="#">Become a Teacher</a>
+        <a href="#">Quick Login</a>
+      </div>
+    </nav>
+
+    <section class="about-section" id="about-section">
+      <div class="containers">
+        <h1>About Us</h1>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="assets/demo.jpg" alt="Teacher Illustration" />
+          </div>
+          <div class="about-text">
+            <h2>A Commitment to Provide Quality Education</h2>
+            <p>
+              At eduprism, we are committed to maintaining the highest standards
+              of quality and integrity. We carefully vet all our tutors and
+              institutes to ensure they meet our rigorous standards. Your
+              educational journey is our top priority, and we are here to
+              support you every step of the way.
+            </p>
+            <a href="#" class="learn-more">Learn More →</a>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat-item">
+            <i class="icon-teacher"></i>
+            <h3>5000+</h3>
+            <p>Teachers</p>
+          </div>
+          <div class="stat-item">
+            <i class="icon-graduation"></i>
+            <h3>4+</h3>
+            <p>Years of Service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tutors-section" id="tutors-section">
+      <h2>
+        Choose from 31 million Home Tutors Nearby
+        <span class="stars">★★★★★</span>
+      </h2>
+      <div class="tutors-container" id="tutorsContainer">
+        <!-- Container where tutor cards will be inserted dynamically -->
+      </div>
+    </section>
+
+    <section class="review-container">
+      <div class="left-section">
+        <h1>Testimonials</h1>
+        <h2>⭐⭐⭐⭐⭐</h2>
+        <h3 id="review-title">The perfect alchemy</h3>
+        <p id="review-text">
+          More than a million students gave
+          <strong>5 stars to their teacher.</strong>
+        </p>
+        <div class="pagination">
+          <button id="prevBtn">←</button>
+          <button id="nextBtn">→</button>
+        </div>
+      </div>
+      <div class="right-section" id="right-section">
+        <!-- Cards will be stacked dynamically -->
+      </div>
+    </section>
+
+    <section class="explore-section">
+      <h2>
+        <span>Learn,</span>
+        <p>Explore your city</p>
+      </h2>
+      <div id="cities-container" class="cities-container">
+        <!-- Cards will be inserted dynamically -->
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container" id="footer-links">
+        <!-- Footer Content -->
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 eduCenter, learn with the best !</p>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
