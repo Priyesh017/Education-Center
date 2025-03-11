@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Tutor Registration Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../form.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">Tutopick</a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links">
+        <a href="#about-section" class="nav-link bounce-to-right">About</a>
+        <a href="#tutors-section" class="nav-link bounce-to-right"
+          >Find Tutors</a
+        >
+        <a href="#" class="bounce-to-right" id="openModal">Become a Teacher</a>
+        <a href="#" class="bounce-to-right">Quick Login</a>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <!-- Close Button -->
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#tutors-section" class="nav-link">Find Tutors</a>
+        <a href="#" class="bounce-to-right">Become a Teacher</a>
+        <a href="#">Quick Login</a>
+      </div>
+    </nav>
+
+    <!-- Form -->
+    <section class="form-section">
+      <div class="container">
+        <h2 class="text-center mb-4 fw-bold">
+          Register as Co-Curricular Tutor
+        </h2>
+
+        <form id="frmTeacher" method="post" action="submit">
+          <div class="row">
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Full Name<span class="text-danger">*</span></label
+              >
+              <input type="text" id="txtFullName" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Email<span class="text-danger">*</span></label
+              >
+              <input type="email" id="txtEmail" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Phone Number<span class="text-danger">*</span></label
+              >
+              <input type="tel" id="txtPhoneNo" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Whatsapp Number<span class="text-danger">*</span></label
+              >
+              <input
+                type="tel"
+                id="txtWhatsAppNo"
+                class="cstm-input"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Date of Birth<span class="text-danger">*</span></label
+              >
+              <input type="date" id="txtDOB" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Gender<span class="text-danger">*</span></label
+              >
+              <div>
+                <input type="radio" name="Gender" value="1" /> Male
+                <input type="radio" name="Gender" value="2" /> Female
+                <input type="radio" name="Gender" value="0" /> Others
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label class="cstm-label"
+                >Full Address<span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                id="txtFullAddress"
+                class="cstm-input"
+                required
+              />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >District<span class="text-danger">*</span></label
+              >
+              <input type="text" id="txtDistrict" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >State<span class="text-danger">*</span></label
+              >
+              <input type="text" id="txtState" class="cstm-input" required />
+            </div>
+            <div class="col-md-4">
+              <label class="cstm-label"
+                >Pin Code<span class="text-danger">*</span></label
+              >
+              <input type="text" id="txtPinCode" class="cstm-input" required />
+            </div>
+            <div class="col-md-12">
+              <label class="cstm-label"
+                >Location Keywords(For Offline)<span class="text-danger"
+                  >*</span
+                ></label
+              >
+              <input type="text" id="txtPinCode" class="cstm-input" required />
+            </div>
+            <div class="col-md-12">
+              <label class="cstm-label fs-4"
+                >Tutoring<span style="color: red">*</span></label
+              >
+              <div class="row tu-cls px-4">
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Subjects You Teach<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="text"
+                      id="txtSubjectsTeach"
+                      for="Subjects You Teach"
+                      class="cstm-input"
+                      placeholder="E.g. Bengali, Hindi, English"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <label class="cstm-label"
+                    >Gender<span class="text-danger">*</span></label
+                  >
+                  <div>
+                    <input type="radio" name="Gender" value="1" /> Offline
+                    <input type="radio" name="Gender" value="2" /> Online
+                    <input type="radio" name="Gender" value="0" /> Both
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Website/ online platform link<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="url"
+                      id="txtWebsite"
+                      for="Website/ online platform link"
+                      class="cstm-input"
+                      placeholder="https://example.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Featured youtube video link<span style="color: red"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      type="url"
+                      id="txtYoutubeLink"
+                      for="Featured youtube video link"
+                      class="cstm-input"
+                      placeholder="https://youtube.com"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <label class="cstm-label"
+                >Teaching Experience (years)<span class="text-danger"
+                  >*</span
+                ></label
+              >
+              <input
+                type="number"
+                id="txtTeachingExperience"
+                class="cstm-input mt-1"
+                required
+              />
+            </div>
+            <div class="col-md-5">
+              <label class="cstm-label"
+                >Your fees structure<span class="text-danger">*</span></label
+              >
+              <div class="row tu-cls px-4">
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Hourly<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="txtHourlyFees"
+                      for="Hourly Fees"
+                      class="cstm-input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Monthly<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="txtMonthlyFees"
+                      for="Monthly Fees"
+                      class="cstm-input"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label class="cstm-label"
+                >Age range(students)<span class="text-danger">*</span></label
+              >
+              <div class="row tu-cls">
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Min Age<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="txtMinAge"
+                      for="Min Age"
+                      class="cstm-input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="reg-frm-group">
+                    <label class="cstm-label"
+                      >Monthly<span style="color: red">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="txtMaxAge"
+                      for="Max Age"
+                      class="cstm-input"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="cstm-label"
+                >Profile Photo<span class="text-danger">*</span></label
+              >
+              <input
+                type="file"
+                id="ProfilePicfile"
+                class="cstm-input"
+                required
+                accept="image/png, image/jpeg"
+                onchange="previewProfileImage()"
+              />
+              <div class="profile-preview" id="profilePreview">
+                <button class="delete-btn" onclick="removeProfileImage(event)">
+                  Delete
+                </button>
+                <img id="previewProfileImg" src="" alt="Profile Preview" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label class="cstm-label"
+                >Upload achivement/awards/certificates<span class="text-danger"
+                  >*</span
+                ></label
+              >
+              <input
+                type="file"
+                id="UploadPic"
+                class="cstm-input"
+                required
+                accept="image/png, image/jpeg"
+                onchange="previewUploadImage()"
+              />
+              <div class="upload-preview" id="uploadPreview">
+                <button
+                  class="delete-btn"
+                  onclick="removeUploadImage(event)"
+                ></button>
+                <img id="previewUploadImg" src="" alt="Upload Preview" />
+              </div>
+            </div>
+            <div class="col-md-12">
+              <label class="cstm-label"
+                >About You<span class="text-danger">*</span></label
+              >
+              <textarea
+                rows="5"
+                id="txtAboutYou"
+                class="cstm-input"
+                required
+              ></textarea>
+            </div>
+            <div class="col-md-12 text-center mt-4">
+              <button type="submit" class="reg-submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="../form.js"></script>
+  </body>
+</html>

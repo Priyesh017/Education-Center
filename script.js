@@ -12,9 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeMenu = document.getElementById("closeMenu");
 
   // Show Navbar on Scroll
-  setTimeout(() => {
-    navbar.classList.add("show");
-  }, 200);
+  // setTimeout(() => {
+  //   navbar.classList.add("show");
+  // }, 200);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
 
   // Toggle Mobile Menu
   hamburger.addEventListener("click", () => {
@@ -31,6 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
     });
+  });
+});
+
+// Modal
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const openModal = document.getElementById("openModal");
+  const closeModal = document.getElementById("closeModal");
+
+  openModal.addEventListener("click", () => {
+    modal.classList.add("active");
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
   });
 });
 

@@ -29,13 +29,61 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <div class="logo">eduCenter</div>
-      <nav>
-        <a href="#" class="bounce-to-right">Become a Teacher</a>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <a href="/" class="logo">Tutopick</a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links">
+        <a href="#about-section" class="nav-link bounce-to-right">About</a>
+        <a href="#tutors-section" class="nav-link bounce-to-right"
+          >Find Tutors</a
+        >
+        <a href="#" class="bounce-to-right" id="openModal">Become a Teacher</a>
         <a href="#" class="bounce-to-right">Quick Login</a>
-      </nav>
-    </header>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <!-- Close Button -->
+        <a href="#about-section" class="nav-link">About</a>
+        <a href="#tutors-section" class="nav-link">Find Tutors</a>
+        <a href="#" class="bounce-to-right" id="openModal">Become a Teacher</a>
+        <a href="#">Quick Login</a>
+      </div>
+    </nav>
+
+    <div class="modal modal-sm" id="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-container view">
+        <div class="modal-header">
+          <a
+            href="#close"
+            class="btn btn-clear float-right"
+            aria-label="Close"
+            id="closeModal"
+          ></a>
+          <div class="modal-title h5">Register as</div>
+        </div>
+        <div class="modal-body">
+          <div class="content">
+            <a href="/forms/tutor/co-curricular.html">Co-Curricular Tutor</a
+            ><br />
+            <a href="#">Academic tutor</a><br />
+            <a href="#">Co-Curricular Institute</a><br />
+            <a href="#">Academic Institute</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main>
       <h1 class="animate__animated animate__bounceInDown">
@@ -75,41 +123,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
-      <div class="logo">eduCenter</div>
-
-      <!-- Search Bar -->
-      <div class="search">
-        <input type="text" placeholder="Course Location" id="locationInput" />
-      </div>
-
-      <!-- Desktop Navigation -->
-      <div class="nav-links">
-        <a href="#about-section" class="nav-link">About</a>
-        <a href="#tutors-section" class="nav-link">Find Tutors</a>
-        <a href="#">Become a Teacher</a>
-        <a href="#">Quick Login</a>
-      </div>
-
-      <!-- Hamburger Menu Icon -->
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div class="mobile-menu" id="mobileMenu">
-        <button class="close-btn" id="closeMenu">&times;</button>
-        <!-- Close Button -->
-        <a href="#about-section" class="nav-link">About</a>
-        <a href="#tutors-section" class="nav-link">Find Tutors</a>
-        <a href="#">Become a Teacher</a>
-        <a href="#">Quick Login</a>
-      </div>
-    </nav>
 
     <section class="about-section" id="about-section">
       <div class="containers">
@@ -195,6 +208,6 @@
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
