@@ -4,10 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Tutor Registration Form</title>
+
+    <!-- Spectre CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+    />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Normal CSS -->
     <link rel="stylesheet" href="../../styles.css" />
     <link rel="stylesheet" href="../form.css" />
   </head>
@@ -22,7 +40,7 @@
         <a href="#tutors-section" class="nav-link bounce-to-right"
           >Find Tutors</a
         >
-        <a href="#" class="bounce-to-right" id="openModal">Become a Teacher</a>
+        <a href="#" class="bounce-to-right openModal">Become a Teacher</a>
         <a href="#" class="bounce-to-right">Quick Login</a>
       </div>
 
@@ -37,12 +55,39 @@
       <div class="mobile-menu" id="mobileMenu">
         <button class="close-btn" id="closeMenu">&times;</button>
         <!-- Close Button -->
-        <a href="#about-section" class="nav-link">About</a>
-        <a href="#tutors-section" class="nav-link">Find Tutors</a>
-        <a href="#" class="bounce-to-right">Become a Teacher</a>
-        <a href="#">Quick Login</a>
+        <a href="#about-section" class="nav-link bounce-to-right">About</a>
+        <a href="#tutors-section" class="nav-link bounce-to-right"
+          >Find Tutors</a
+        >
+        <a class="bounce-to-right openModal">Become a Teacher</a>
+        <a href="#" class="bounce-to-right">Quick Login</a>
       </div>
     </nav>
+
+    <!-- Modal -->
+    <div class="modal modal-sm" id="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-container view">
+        <div class="modal-header">
+          <a
+            href="#close"
+            class="btn btn-clear float-right"
+            aria-label="Close"
+            id="closeModal"
+          ></a>
+          <div class="modal-title h5">Register as</div>
+        </div>
+        <div class="modal-body">
+          <div class="content">
+            <a href="/forms/tutor/co-curricular.html">Co-Curricular Tutor</a
+            ><br />
+            <a href="#">Academic tutor</a><br />
+            <a href="#">Co-Curricular Institute</a><br />
+            <a href="#">Academic Institute</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Form -->
     <section class="form-section">
