@@ -45,11 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // Modal
 document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
-  const openModal = document.getElementById("openModal");
   const closeModal = document.getElementById("closeModal");
 
-  openModal.addEventListener("click", () => {
-    modal.classList.add("active");
+  document.querySelectorAll(".openModal").forEach((link) => {
+    link.addEventListener("click", () => {
+      modal.classList.add("active");
+    });
   });
 
   closeModal.addEventListener("click", () => {
