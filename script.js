@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
   //   navbar.classList.add("show");
   // }, 200);
 
+  document.querySelectorAll(".section").forEach((links) => {
+    links.addEventListener("click", () => {
+      navbar.classList.add("scrolled");
+    });
+  });
+
   window.addEventListener("scroll", () => {
     if (window.scrollY > 20) {
       navbar.classList.add("scrolled");
@@ -47,6 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const modal = document.getElementById("modal");
   const closeModal = document.getElementById("closeModal");
 
+  document.querySelectorAll(".option").forEach((option) => {
+    option.addEventListener("click", () => {
+      window.location.href = "forms/tutor/co-curricular.html"; // Redirect URL
+    });
+  });
+
   document.querySelectorAll(".openModal").forEach((link) => {
     link.addEventListener("click", () => {
       modal.classList.add("active");
@@ -59,6 +71,64 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // About Section
+document.addEventListener("DOMContentLoaded", () => {
+  // Feature Data Array with Image Icons
+  const features = [
+    {
+      title: "Verified Teachers",
+      description:
+        "All our teachers are thoroughly verified to ensure they meet our high standards of expertise and professionalism.",
+      image: "assets/verified-person-icon.png",
+    },
+    {
+      title: "Personalized Learning",
+      description:
+        "Get customized learning experiences tailored to your specific needs, learning style, and pace.",
+      image: "assets/learning-icon.png",
+    },
+    {
+      title: "Flexible Options",
+      description:
+        "Choose between online and in-person sessions based on your preference and convenience.",
+      image: "assets/flexible-icon.svg",
+    },
+  ];
+
+  // Get the container
+  const featuresContainer = document.getElementById("features-container");
+
+  // Dynamically generate feature cards
+  features.forEach((feature) => {
+    const card = document.createElement("div");
+    card.classList.add("feature-card");
+
+    card.innerHTML = `
+          <div class="cstm-icons">
+              <img src="${feature.image}" alt="${feature.title}">
+          </div>
+          <h3>${feature.title}</h3>
+          <p>${feature.description}</p>
+      `;
+
+    featuresContainer.appendChild(card);
+  });
+
+  // Function to add animation when scrolling
+  function checkVisibility() {
+    const cards = document.querySelectorAll(".feature-card");
+    cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        card.classList.add("show");
+      }
+    });
+  }
+
+  // Add scroll event listener
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Initial check on load
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const stats = document.querySelectorAll(".stat-item h3");
 

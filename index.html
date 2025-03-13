@@ -35,8 +35,10 @@
 
       <!-- Desktop Navigation -->
       <div class="nav-links">
-        <a href="#about-section" class="nav-link bounce-to-right">About</a>
-        <a href="#tutors-section" class="nav-link bounce-to-right"
+        <a href="#about-section" class="nav-link section bounce-to-right"
+          >About</a
+        >
+        <a href="#tutors-section" class="nav-link section bounce-to-right"
           >Find Tutors</a
         >
         <a href="#" class="bounce-to-right openModal">Become a Teacher</a>
@@ -54,8 +56,10 @@
       <div class="mobile-menu" id="mobileMenu">
         <button class="close-btn" id="closeMenu">&times;</button>
         <!-- Close Button -->
-        <a href="#about-section" class="nav-link bounce-to-right">About</a>
-        <a href="#tutors-section" class="nav-link bounce-to-right"
+        <a href="#about-section" class="nav-link section bounce-to-right"
+          >About</a
+        >
+        <a href="#tutors-section" class="nav-link section bounce-to-right"
           >Find Tutors</a
         >
         <a class="bounce-to-right openModal">Become a Teacher</a>
@@ -64,7 +68,7 @@
     </nav>
 
     <!-- Modal -->
-    <div class="modal modal-sm" id="modal">
+    <div class="modal" id="modal">
       <div class="modal-overlay"></div>
       <div class="modal-container view">
         <div class="modal-header">
@@ -78,11 +82,24 @@
         </div>
         <div class="modal-body">
           <div class="content">
-            <a href="/forms/tutor/co-curricular.html">Co-Curricular Tutor</a
-            ><br />
-            <a href="#">Academic tutor</a><br />
-            <a href="#">Co-Curricular Institute</a><br />
-            <a href="#">Academic Institute</a>
+            <div class="options">
+              <div class="option">
+                <div class="icon blue">&#128187;</div>
+                <p>Co-Curricular Tutor</p>
+              </div>
+              <div class="option">
+                <div class="icon orange">&#127891;</div>
+                <p>Academic Tutor</p>
+              </div>
+              <div class="option">
+                <div class="icon green">&#127963;</div>
+                <p>Co-Curricular Institute</p>
+              </div>
+              <div class="option">
+                <div class="icon cyan">&#127970;</div>
+                <p>Academic Institute</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,22 +146,13 @@
 
     <section class="about-section" id="about-section">
       <div class="containers">
-        <h1>About Us</h1>
-        <div class="about-content">
-          <div class="about-image">
-            <img src="assets/demo.jpg" alt="Teacher Illustration" />
-          </div>
-          <div class="about-text">
-            <h2>A Commitment to Provide Quality Education</h2>
-            <p>
-              At eduprism, we are committed to maintaining the highest standards
-              of quality and integrity. We carefully vet all our tutors and
-              institutes to ensure they meet our rigorous standards. Your
-              educational journey is our top priority, and we are here to
-              support you every step of the way.
-            </p>
-            <a href="#" class="learn-more">Learn More →</a>
-          </div>
+        <h2>Why Choose Tutopick?</h2>
+        <p>
+          We connect students with the best tutors to ensure quality education
+          and personalized learning experiences.
+        </p>
+        <div class="features" id="features-container">
+          <!-- Feature cards will be dynamically rendered here -->
         </div>
         <div class="stats">
           <div class="stat-item">
@@ -172,7 +180,14 @@
     </section>
 
     <section class="testimonials">
-      <h1>Testimonials</h1>
+      <div class="header">
+        <h1>What Our Students Say</h1>
+        <h5>
+          Hear from students who found their perfect teachers through our
+          platform
+        </h5>
+      </div>
+
       <div class="review-container">
         <div class="left-section">
           <h2>⭐⭐⭐⭐⭐</h2>
