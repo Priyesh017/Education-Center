@@ -1155,7 +1155,7 @@ section h1 {
 
 @media (max-width: 480px) {
   .review-container {
-    min-height: 100vh;
+    min-height: 120vh;
   }
 
   .review-container h1 {
@@ -1164,7 +1164,7 @@ section h1 {
 
   .testimonial-card {
     width: 100%;
-    max-height: 400px;
+    min-height: 400px;
     max-width: 300px;
   }
 
