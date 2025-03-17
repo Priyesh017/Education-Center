@@ -314,8 +314,7 @@ main h1 {
   margin-top: 30px;
   padding: 12px 15px;
   border-radius: 35px;
-  background: whitesmoke;
-  /* width: 100%; */
+  background: white;
   max-width: 900px;
 }
 
@@ -387,39 +386,40 @@ main h1 {
 .auto {
   border-radius: 50px;
   background-color: white;
-  padding: 10px;
+  padding: 5px 10px;
   margin-top: 50px;
   width: 100%;
   max-width: 1000px;
   overflow-x: auto;
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 10px;
+.tag-list {
+  position: relative;
   overflow: hidden;
+  background: #ffffff;
+  padding: 10px 0;
 }
 
-.category-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.category {
+.inner {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  gap: 1rem;
+  width: max-content;
+  animation: loop 10s linear infinite;
 }
 
-/* Category Button */
-.catBtn {
+/* .tag {
+  display: flex;
+  align-items: center;
+  color: #334155;
+  font-size: 1rem;
+  background-color: #f1f5f9;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+} */
+
+.tag {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -431,19 +431,19 @@ main h1 {
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
-.catBtn i {
+.tag i {
   color: #e61e2a;
 }
 
-.catBtn:hover {
+.tag:hover {
   background-color: whitesmoke;
   transform: scale(1.05);
 }
 
-/* Category */
 .grow-shadow {
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
@@ -454,6 +454,32 @@ main h1 {
 .grow-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
+}
+
+.fade {
+  position: absolute;
+  background: linear-gradient(
+    150deg,
+    white,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    white
+  );
+  inset: 0;
+  pointer-events: none;
+}
+
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.tag-list:hover .inner {
+  animation-play-state: paused;
 }
 
 /* Responsive Design */
@@ -491,11 +517,6 @@ main h1 {
 
   .search-item {
     padding: 20px;
-  }
-
-  .category {
-    overflow-x: scroll;
-    overflow-y: visible;
   }
 }
 
@@ -1209,97 +1230,6 @@ section h1 {
   z-index: 3;
   opacity: 1;
 } */
-
-/* EXPLORE SECTION */
-.explore-section {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.explore-section h2 {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 25px;
-  color: #333;
-}
-
-.explore-section h2 span {
-  color: #1a237e;
-  font-size: 40px;
-}
-
-/* Cities Container */
-.cities-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-/* City Card */
-.city {
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 230px;
-  transition: transform 0.3s ease-in-out;
-  text-align: center;
-}
-
-.city:hover {
-  transform: scale(1.05);
-}
-
-.city h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.city ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.city ul li {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 5px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .explore-section {
-    width: 95%;
-    text-align: center;
-  }
-
-  .cities-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .city {
-    width: 90%;
-    max-width: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .explore-section h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-
-  .city {
-    width: 100%;
-  }
-}
 
 /* Footer */
 footer {

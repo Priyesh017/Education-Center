@@ -152,22 +152,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Category Data
 const categories = [
-  { name: "Tamil", icon: "fas fa-language" },
-  { name: "Flute", icon: "fas fa-music" },
-  { name: "Art & Design", icon: "fas fa-paint-brush" },
-  { name: "Badminton", icon: "fas fa-volleyball-ball" },
-  { name: "Telugu", icon: "fas fa-language" },
-  { name: "Vocal Coach", icon: "fas fa-microphone" },
-  { name: "Spanish", icon: "fas fa-globe" },
-  { name: "Micro", icon: "fas fa-microchip" },
+  { name: "Art", icon: "fas fa-language" },
+  { name: "Science", icon: "fas fa-music" },
+  { name: "History", icon: "fas fa-paint-brush" },
+  { name: "Geography", icon: "fas fa-volleyball-ball" },
+  { name: "English", icon: "fas fa-language" },
+  { name: "Math", icon: "fas fa-microphone" },
+  { name: "Music", icon: "fas fa-globe" },
+  { name: "Literature", icon: "fas fa-microchip" },
+  { name: "Art", icon: "fas fa-language" },
+  { name: "Science", icon: "fas fa-music" },
+  { name: "History", icon: "fas fa-paint-brush" },
+  { name: "Geography", icon: "fas fa-volleyball-ball" },
+  { name: "English", icon: "fas fa-language" },
+  { name: "Math", icon: "fas fa-microphone" },
+  { name: "Music", icon: "fas fa-globe" },
+  { name: "Literature", icon: "fas fa-microchip" },
 ];
 
-const categoryContainer = document.querySelector(".category");
+const categoryContainer = document.querySelector(".inner");
 
 // Generate buttons dynamically
 categories.forEach((category) => {
   const button = document.createElement("button");
-  button.classList.add("catBtn", "grow-shadow");
+  button.classList.add("tag", "grow-shadow");
   button.innerHTML = `<i class="${category.icon}"></i> ${category.name}`;
   categoryContainer.appendChild(button);
 });
@@ -372,47 +380,6 @@ document.getElementById("prevBtn").addEventListener("click", () => {
 
 // Initial Load
 updateReview("next");
-
-// Cities Section
-document.addEventListener("DOMContentLoaded", function () {
-  const citiesData = [
-    { name: "Mumbai", courses: ["English", "Guitar", "Driving"] },
-    { name: "New Delhi", courses: ["Guitar", "Yoga", "French"] },
-    { name: "Bengaluru", courses: ["Yoga", "Singing", "Dance"] },
-    { name: "Kolkata", courses: ["Guitar", "Singing", "Maths"] },
-    { name: "Ahmedabad", courses: ["Yoga", "Singing", "French"] },
-    { name: "Hyderabad", courses: ["Singing", "Yoga", "English"] },
-    { name: "Pune", courses: ["English", "Piano", "Singing"] },
-    { name: "Surat", courses: ["Maths", "English", "Sanskrit"] },
-    { name: "Jaipur", courses: ["Yoga", "English", "Guitar"] },
-    { name: "Navi Mumbai", courses: ["Yoga", "Guitar", "Singing"] },
-    { name: "Lucknow", courses: ["Guitar", "Dance", "Singing"] },
-    { name: "Nagpur", courses: ["Singing", "Physics", "French"] },
-  ];
-
-  const citiesContainer = document.getElementById("cities-container");
-
-  citiesData.forEach((city) => {
-    const cityDiv = document.createElement("div");
-    cityDiv.classList.add("city");
-
-    const cityTitle = document.createElement("h3");
-    cityTitle.textContent = city.name;
-    cityDiv.appendChild(cityTitle);
-
-    if (city.courses.length > 0) {
-      const courseList = document.createElement("ul");
-      city.courses.forEach((course) => {
-        const courseItem = document.createElement("li");
-        courseItem.textContent = course;
-        courseList.appendChild(courseItem);
-      });
-      cityDiv.appendChild(courseList);
-    }
-
-    citiesContainer.appendChild(cityDiv);
-  });
-});
 
 // Footer
 document.addEventListener("DOMContentLoaded", () => {
