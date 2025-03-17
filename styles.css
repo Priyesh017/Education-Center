@@ -460,7 +460,7 @@ main h1 {
 .fade {
   position: absolute;
   background: linear-gradient(
-    150deg,
+    120deg,
     white,
     rgba(255, 255, 255, 0) 40%,
     rgba(255, 255, 255, 0) 60%,
