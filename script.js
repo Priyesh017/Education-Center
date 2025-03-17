@@ -301,7 +301,7 @@ const reviews = [
     reviewerName: "Neha",
     reviewerRole: "JavaScript Mentor",
     testimonial:
-      "The JavaScript course has been really well-structured and informative...",
+      "The JavaScript course has been really well-structured, knowledgeable and informative...",
     reviewerFooter: "Arjun ⭐⭐⭐⭐⭐",
     bgColor: "#ff7f50",
   },
