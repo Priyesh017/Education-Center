@@ -1155,7 +1155,7 @@ section h1 {
 
 @media (max-width: 480px) {
   .review-container {
-    min-height: 120vh;
+    min-height: 110vh;
   }
 
   .review-container h1 {
