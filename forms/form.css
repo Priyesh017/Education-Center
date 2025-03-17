@@ -4,7 +4,7 @@
 
 /* Form Section */
 .form-section {
-  background: linear-gradient(to bottom, #ffffff, #f88eba);
+  background: linear-gradient(to bottom, #ffffff, #4d94ff);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -62,13 +62,13 @@
 }
 
 .cstm-input:focus {
-  border-color: #ff69b4;
+  border-color: #4d94ff;
   outline: none;
 }
 
 /* Submit Button */
 .reg-submit {
-  background-color: #ff69b4;
+  background-color: #4d94ff;
   color: white;
   padding: 12px 24px;
   border: none;
@@ -79,7 +79,7 @@
 }
 
 .reg-submit:hover {
-  background-color: #ff1493;
+  background-color: #2a7efd;
 }
 
 /* Responsive Profile Upload Preview */
